@@ -1,7 +1,7 @@
 function! Powerline#Functions#lawrencium#GetBranch(...) " {{{
-    let branch = lawrencium#statusline()
-    if branch != ''
-        return '☿ '.lawrencium#statusline()
+    let status = lawrencium#statusline()
+    if status != ''
+        return '☿ '.status
     else
         return ''
     endif
