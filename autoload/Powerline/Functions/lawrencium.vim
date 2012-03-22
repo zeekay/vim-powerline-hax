@@ -1,7 +1,7 @@
 function! Powerline#Functions#lawrencium#GetBranch(...) " {{{
 
-    if !g:Powerline_symbols_override['LAWRENCIUM']
-        let g:Powerline_symbols_override['LAWRENCIUM'] = 'hg:'
+    if !has_key(g:Powerline_symbols_override, 'LAWRENCIUM')
+        let g:Powerline_symbols_override['LAWRENCIUM'] = 'hg '
     endif
 
     let status = lawrencium#statusline()

@@ -1,7 +1,7 @@
 function! Powerline#Functions#fugitive#GetBranch(symbol) " {{{
 
-    if !g:Powerline_symbols_override['FUGITIVE']
-        let g:Powerline_symbols_override['FUGITIVE'] = 'git:'
+    if !has_key(g:Powerline_symbols_override, 'FUGITIVE')
+        let g:Powerline_symbols_override['FUGITIVE'] = 'git '
     endif
 
     let status = substitute(fugitive#statusline()[5:-3], '(', ' ', '')
